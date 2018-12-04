@@ -90,9 +90,10 @@ function Game() {
         if (this.furry.x === this.coin.x && this.furry.y === this.coin.y) {
 
             // tu jest blad
-            var coinPointsy = document.querySelector(".coin") // <--
-            coinPointsy.classList.remove("coin"); // <--
             this.score++;
+            var coinPointsy = document.querySelector(".coin") // <--
+            console.log(coinPointsy);
+            coinPointsy.classList.remove("coin"); // <--
             var scorePointsy = document.getElementById("scoreNumber")
             scorePointsy.innerHTML = this.score;
             this.Coin = new Coin();
