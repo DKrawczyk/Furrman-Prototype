@@ -1,4 +1,5 @@
 console.log("hello");
+console.log("dupa");
 
 function Furry() {
     this.x = 0;
@@ -22,9 +23,17 @@ function Game() {
     }
 
     this.showFurry = function () {
+
         if (document.querySelector(".furry") != null) {
-        this.hideVisibleFurry();
+            this.hideVisibleFurry();
         }
+
+        var position = this.board[this.index(this.furry.x, this.furry.y)];
+
+        if (position !== undefined) {
+            position.classList.add('furry');
+        }
+    };
 
     this.board [this.index(this.furry.x,this.furry.y) ].classList.add("furry");
     }
@@ -54,9 +63,9 @@ function Game() {
         else if (this.furry.direction === "top") {
             this.furry.y = this.furry.y -1;
         }
+        this.gameOver();
         this.showFurry();
         this.checkCoinCollision();
-        this.gameOver();
     }
 
     this.hideVisibleFurry = function () {
@@ -89,14 +98,12 @@ function Game() {
     this.checkCoinCollision = function() {
         if (this.furry.x === this.coin.x && this.furry.y === this.coin.y) {
 
-            // tu jest blad
+            var coinPointsy = document.querySelector(".coin");
+            coinPointsy.classList.remove("coin"); 
             this.score++;
-            var coinPointsy = document.querySelector(".coin") // <--
-            console.log(coinPointsy);
-            coinPointsy.classList.remove("coin"); // <--
-            var scorePointsy = document.getElementById("scoreNumber")
+            var scorePointsy = document.getElementById("scoreNumber");
             scorePointsy.innerHTML = this.score;
-            this.Coin = new Coin();
+            this.coin = new Coin();
             this.showCoin();
         }
     }
@@ -115,5 +122,5 @@ var start = new Game();
 start.showFurry();
 start.showCoin();
 start.startGame();
-// start.checkCoinCollision(); <-- na dwa sposoby probowalem
+
 
