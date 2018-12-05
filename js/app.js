@@ -1,5 +1,5 @@
 console.log("hello");
-console.log("dupa");
+console.log("test");
 
 function Furry() {
     this.x = 0;
@@ -34,12 +34,9 @@ function Game() {
             position.classList.add('furry');
         }
     };
-
-    this.board [this.index(this.furry.x,this.furry.y) ].classList.add("furry");
-    }
     
     this.showCoin = function () {
-        this.board [this.index(this.coin.x,this.coin.y) ].classList.add("coin");
+        this.board[this.index(this.coin.x,this.coin.y)].classList.add("coin");
     }
 
     var self = this;
@@ -108,11 +105,9 @@ function Game() {
         }
     }
 
-    // nie dziala wzgledem gory i dolu
     this.gameOver = function() {
         if (this.furry.x < 0 || this.furry.x > 9 || this.furry.y < 0 || this.furry.y > 9) {
             clearInterval(1);
-            this.hideVisibleFurry();
         }
     }
 }
