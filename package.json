@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DKrawczyk/WRO_FER_S_16_REACT_Furry_Game#readme",
   "dependencies": {
+    "gulp": "^3.9.1",
     "webpack": "^4.27.0",
     "webpack-cli": "^3.1.2"
   }

@@ -1,14 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
 * {
     box-sizing: border-box;
-}
-
-body {
     margin: 0;
     padding: 0;
 }
 
-section#score {
-  width: 100%;
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color:black;
+}
+
+#score  {
+  width: 95vw;
+  height: 6vh;
+  text-align: center;
+  padding-top: 0.5em;
+  /* border: 1px solid yellow; */
+  border-radius: 1px;
+  /* box-shadow: 1px 1px 5px 1px yellow; */
+  color:darkred;
+  /* margin: 1em auto; */
+}
+
+.scoreContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.firstPlayer {
+  width:200px;
+  /* height:200px; */
+  /* background-color: red; */
+}
+
+.highestScore {
+  width:200px;
+  /* height:200px; */
+  /* background-color: green; */
+}
+
+.secondPlayer {
+  width:200px;
+  /* height:200px; */
+  /* background-color: blue; */
+}
+
+.start {
+  width:100vw;
+  height:70vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content:space-between;
+  margin: 0 auto;
+  background-color: lightgreen;
+}
+
+.gameName { 
+  border:1px solid black;
+  width: 80vw;
+  height:100px;
+}
+
+.gameName h1 {
+  font-size: 7em;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.choseOne {
+  border:1px solid black;
+  width: 80vw;
+  height:100px;
+}
+
+.license {
+  border:1px solid black;
+  width: 80vw;
+  height:100px;
 }
 
 #board {
@@ -18,35 +90,22 @@ section#score {
 }
 
 #board  > div {    
-  border: 1px solid black;
+  border: 5px double blue;
+  margin-top: 1px;
+  border-radius:10px;
   float: left;
   width: 64px;
   height: 64px;
 }
 
-
-section#score div {
-  width: 10em;
-  height: 3em;
-  text-align: center;
-  padding: 0.5em;
-  background-color: rgba(211,211,211, 0.75);
-  border: 1px solid lightgray;
-  border-radius: 1px;
-  box-shadow: 1px 1px 5px 1px lightgray;
-  margin: 1em auto;
-}
-
-
-
-
 .furry {
-  background-image: url('../images/furry.png');
+  background-image: url('../images/pacman.gif');
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .coin {
-  background-image: url('../images/coin.png');
+  background-image: url('../images/ghost.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -74,3 +133,4 @@ section#over pre {
 .invisible {
   display: none;
 }
+
